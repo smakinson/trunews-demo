@@ -9,17 +9,17 @@
 
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlNDg5NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNWFmZDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: url("/img/banner-globe.png") 0 -70px, -moz-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* FF3.6-15 */
+  background: url("img/banner-globe.png") 0 -70px, -moz-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* FF3.6-15 */
 
-  background: url("/img/banner-globe.png") 0 -70px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, _palette(accent1, bg)), color-stop(20%, _palette(accent2, bg)), color-stop(100%, _palette(accent3, bg))); /* Chrome4-9,Safari4-5 */
+  background: url("img/banner-globe.png") 0 -70px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, _palette(accent1, bg)), color-stop(20%, _palette(accent2, bg)), color-stop(100%, _palette(accent3, bg))); /* Chrome4-9,Safari4-5 */
 
-  background: url("/img/banner-globe.png") 0 -70px, -webkit-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent3, bg) 20%, _palette(accent3, bg) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: url("img/banner-globe.png") 0 -70px, -webkit-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent3, bg) 20%, _palette(accent3, bg) 100%); /* Chrome10-25,Safari5.1-6 */
 
-  background: url("/img/banner-globe.png") 0 -70px, -o-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* Opera 11.10-11.50 */
+  background: url("img/banner-globe.png") 0 -70px, -o-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* Opera 11.10-11.50 */
 
-  background: url("/img/banner-globe.png") 0 -70px, -ms-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* IE10 preview */
+  background: url("img/banner-globe.png") 0 -70px, -ms-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* IE10 preview */
 
-  background: url("/img/banner-globe.png") 0 -70px, linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: url("img/banner-globe.png") 0 -70px, linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{_palette(accent1, bg)}', endColorstr='#{_palette(accent3, bg)}', GradientType=0); /* IE6-8 */
 
