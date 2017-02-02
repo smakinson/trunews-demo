@@ -3,10 +3,10 @@
     skel.on('ready', function () {
 
         skel.breakpoints({
-            xlarge: "(max-width: 1680px)",
-            large: "(max-width: 1366px)",
-            medium: "(max-width: 980px)",
-            small: "(max-width: 736px)",
+            xlarge: "(min-width: 1367px) and (max-width: 1680px)",
+            large: "(min-width: 981px) and (max-width: 1366px)",
+            medium: "(min-width: 737px) and (max-width: 980px)",
+            small: "(min-width: 481px) and (max-width: 736px)",
             xsmall: "(max-width: 480px)"
         });
 
@@ -119,6 +119,8 @@
             });
         });
 
+        var slideColTween, slideListColTween;
+
         slides.parent().on('mouseenter', function (event) {
 
             // Is the current slide on its way out?
@@ -131,11 +133,35 @@
                 tl.pause();
                 tl.tweenTo(labelTime);
             }
+
+            // Show some more of the slide on mouse enter, but not on a touch screen.
+            if (! skel.vars.touch && skel.breakpoint("large").active) {
+                slideColTween = TweenMax.to('#home-slide-col', .5, {
+                    width: '74%',
+                    ease: Back.easeOut, onReverseComplete: function () {
+                        $('#home-slide-col').removeAttr('style');
+                    }
+                });
+                slideListColTween = TweenMax.to('#home-slide-list-col', .5, {
+                    width: '26%', ease: Back.easeOut, onReverseComplete: function () {
+                        $('#home-slide-list-col').removeAttr('style');
+                    }
+                });
+            }
         });
 
         slides.parent().on('mouseleave', function (event) {
             if (tl.paused()) tl.play();
             paused = false;
+
+            if (slideColTween) {
+                slideColTween.timeScale(3);
+                slideColTween.reverse();
+            }
+            if (slideListColTween) {
+                slideListColTween.timeScale(3);
+                slideListColTween.reverse();
+            }
         });
 
         slidesListLinks.on('click', function (event) {

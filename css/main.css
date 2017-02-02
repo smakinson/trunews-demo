@@ -1909,52 +1909,57 @@ section header h2.main {
     overflow: hidden; }
     #home-banner #banner-content .hashtag {
       font-size: 1.5em; }
-    #home-banner #banner-content .streamcast > header {
-      position: relative;
-      box-sizing: border-box;
-      font-size: 0.8em;
-      padding: 10px 0 12px 1.2em;
-      margin: 0;
-      color: #ffffff;
-      background-color: #B20000;
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
-      #home-banner #banner-content .streamcast > header * {
-        padding: 0;
-        margin: 0; }
-      #home-banner #banner-content .streamcast > header a {
-        position: absolute;
-        top: 9px;
-        right: 10px;
-        font-size: 1.1em;
+    #home-banner #banner-content .streamcast {
+      overflow: hidden; }
+      #home-banner #banner-content .streamcast > header {
+        position: relative;
+        box-sizing: border-box;
+        font-size: 0.8em;
+        padding: 10px 0 12px 1.2em;
+        margin: 0;
         color: #ffffff;
-        margin-right: .7em; }
-    #home-banner #banner-content .streamcast a.spreaker-player {
-      box-sizing: border-box;
-      padding: 2em;
-      color: #000000;
-      font-size: 1.2em;
-      display: block;
-      text-align: center;
-      text-decoration: underline; }
-      #home-banner #banner-content .streamcast a.spreaker-player:before {
-        content: 'Your browser may not support the stream player. ';
-        font-weight: 700; }
-  #home-banner #banner-focus {
+        background-color: #B20000;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+        #home-banner #banner-content .streamcast > header * {
+          padding: 0;
+          margin: 0; }
+        #home-banner #banner-content .streamcast > header a {
+          position: absolute;
+          top: 9px;
+          right: 10px;
+          font-size: 1.1em;
+          color: #ffffff;
+          margin-right: .7em; }
+      #home-banner #banner-content .streamcast a.spreaker-player {
+        box-sizing: border-box;
+        padding: 2em;
+        color: #000000;
+        font-size: 1.2em;
+        display: block;
+        text-align: center;
+        text-decoration: underline; }
+        #home-banner #banner-content .streamcast a.spreaker-player:before {
+          content: 'Your browser may not support the stream player. ';
+          font-weight: 700; }
+  #home-banner #home-slide-col {
     overflow: hidden;
+    background-color: transparent;
     height: 530px;
     clip-path: polygon(0 0, 100% 0, 93% 18.5%, 100% 37%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 93% 18.5%, 100% 37%, 100% 100%, 0 100%); }
-    #home-banner #banner-focus .hero {
+    #home-banner #home-slide-col .hero {
       height: 530px; }
-      #home-banner #banner-focus .hero .content {
+      #home-banner #home-slide-col .hero .content {
         bottom: 90px;
         padding-right: 4em; }
-      #home-banner #banner-focus .hero p {
+      #home-banner #home-slide-col .hero p {
         margin-bottom: .4em; }
   #home-banner .hover-list .header h2 {
-    margin-bottom: 0.4em; }
+    margin-bottom: 0.4em;
+    white-space: nowrap;
+    overflow: hidden; }
   #home-banner .hover-list li {
     margin-left: -70px; }
     #home-banner .hover-list li a {
@@ -1977,11 +1982,11 @@ section header h2.main {
       background-size: 100%; }
       #home-banner #banner-content .streamcast .header h2 {
         font-size: 1.5em; }
-    #home-banner #banner-focus {
+    #home-banner #home-slide-col {
       height: 318px;
       clip-path: none;
       -webkit-clip-path: none; }
-      #home-banner #banner-focus .hero {
+      #home-banner #home-slide-col .hero {
         height: 318px; }
     #home-banner .hover-list {
       padding-top: 0; }
