@@ -1931,7 +1931,8 @@ section header h2.main {
           right: 10px;
           font-size: 1.1em;
           color: #ffffff;
-          margin-right: .7em; }
+          margin-right: .7em;
+          background-color: #B20000; }
       #home-banner #banner-content .streamcast a.spreaker-player {
         box-sizing: border-box;
         padding: 2em;
@@ -2425,7 +2426,12 @@ button:not(.hashtag),
       text-align: left; } }
   @media screen and (max-width: 480px) {
     #footer #footer-to-top {
-      float: none; } }
+      float: none;
+      position: absolute;
+      margin-top: 20px; }
+    #footer nav {
+      /*padding-top: 10px;*/
+      margin-top: 3em; } }
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
