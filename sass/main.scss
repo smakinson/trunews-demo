@@ -1,0 +1,60 @@
+@import 'defaults/vars';
+@import "layout/mixins";
+@import "layout/skel-setup";
+@import 'libs/functions';
+@import 'libs/skel';
+@import 'libs/util';
+@import 'font-awesome.min.css';
+
+// Skelton setup.
+
+@include skel-breakpoints((
+        xlarge: "(max-width: 1680px)",
+        large: "(max-width: 1280px)",
+        medium: "(max-width: 980px)",
+        small: "(max-width: 736px)",
+        xsmall: "(max-width: 480px)"
+));
+
+/* Manually adding normalize and not using the skel version */
+@include skel-layout((
+        grid: true,
+        containers: 1150px,
+        breakpoints: (
+                large: (
+                        containers: 90%
+                ),
+                medium: (
+                        containers: 95%
+                )
+        )
+));
+
+// Defaults.
+@import 'defaults/html5boilerplate';
+
+@import 'defaults/page';
+@import 'defaults/typography';
+@import "defaults/icon";
+@import "defaults/list";
+@import "defaults/button";
+
+// Layout.
+@import "layout/section";
+@import "layout/header";
+@import "layout/home-banner";
+@import "layout/home-recent-stories";
+@import "layout/_home-streamcasts.scss";
+@import "layout/home-team";
+@import "layout/home-more-news";
+@import "layout/slides";
+@import "layout/hero";
+//@import "layout/hero-panel";
+@import "layout/hashtag";
+@import "layout/button";
+@import "layout/list";
+@import "layout/footer";
+
+// Print.
+@import "print/highres";
+@import 'print/html5boilerplate-print';

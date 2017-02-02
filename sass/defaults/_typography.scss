@@ -1,0 +1,95 @@
+
+body {
+  background-color: _palette(bg);
+  color: _palette(fg);
+}
+
+body, input, select, textarea {
+  font-family: _font(family);
+  font-size: 16pt;
+  font-weight: _font(weight);
+  line-height: 1.65;
+
+  @include breakpoint(xlarge) {
+    font-size: 13pt;
+  }
+
+  @include breakpoint(large) {
+    font-size: 12pt;
+  }
+
+  @include breakpoint(xxsmall) {
+    font-size: 11pt;
+  }
+}
+
+a {
+  @include vendor('transition', (
+          'color #{_duration(transition)} ease-in-out',
+          'border-bottom-color #{_duration(transition)} ease-in-out',
+  ));
+  color: _palette(accent1, bg);
+  font-weight: _font(weight);
+  text-decoration: none;
+  border-bottom: dotted 1px;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+strong, b {
+  font-family: _font(family-heading);
+  font-weight: _font(weight-bold);
+}
+
+p {
+  margin: 0 0 _size(element-margin) 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  line-height: 1.1em;
+  margin: 0 0 (_size(element-margin) * 0.5) 0;
+  font-weight: _font(weight-bold);
+  letter-spacing: _font(kerning);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
+
+h1, h2 {
+  font-family: _font(family-heading);
+  font-weight: _font(weight-heading);
+  letter-spacing: _font(kerning-heading);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0 0 (_size(element-margin) * 0.2) 0;
+}
+
+h3 {
+  font-size: 0.8em;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-size: 0.7em;
+}
+
+h5 {
+  font-size: 0.7em;
+}
+
+h6 {
+  font-size: 0.6em;
+}
+

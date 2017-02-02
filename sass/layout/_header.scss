@@ -1,0 +1,280 @@
+#header {
+
+  padding: 1.5em 0 0 0;
+
+  /* --- globe and gradient layered background start */
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e4897+0,2989d8+20,25afd0+100 */
+  background: _palette(bg); /* Old browsers */
+
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlNDg5NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNWFmZDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: url("/img/banner-globe.png") 0 -70px, -moz-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* FF3.6-15 */
+
+  background: url("/img/banner-globe.png") 0 -70px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, _palette(accent1, bg)), color-stop(20%, _palette(accent2, bg)), color-stop(100%, _palette(accent3, bg))); /* Chrome4-9,Safari4-5 */
+
+  background: url("/img/banner-globe.png") 0 -70px, -webkit-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent3, bg) 20%, _palette(accent3, bg) 100%); /* Chrome10-25,Safari5.1-6 */
+
+  background: url("/img/banner-globe.png") 0 -70px, -o-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* Opera 11.10-11.50 */
+
+  background: url("/img/banner-globe.png") 0 -70px, -ms-linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* IE10 preview */
+
+  background: url("/img/banner-globe.png") 0 -70px, linear-gradient(185deg, _palette(accent1, bg) 0%, _palette(accent2, bg) 20%, _palette(accent3, bg) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{_palette(accent1, bg)}', endColorstr='#{_palette(accent3, bg)}', GradientType=0); /* IE6-8 */
+
+  background-repeat: no-repeat;
+  background-size: 80%, 100%;
+
+  /* --- globe and gradient layered background end */
+
+  > header {
+    @include vendor('transition', (
+            'padding #{_duration(transition) * 1.5} ease-out',
+    ));
+  }
+
+  &.locked {
+
+    #header-lock {
+      position: fixed;
+      width: 100%;
+
+      top:0;
+      left: 0;
+      padding-top: 0.5em;
+      background-color: _palette(bg-header-lock);
+      border-bottom: 1px solid _palette(fg);
+      z-index: (_misc(z-index-base) + 500);
+
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+      .container {
+        margin-left: _size(element-margin);
+        margin-right: _size(element-margin);
+      }
+
+      a.logo {
+        margin-bottom: 0.5em;
+      }
+
+      img.logo {
+        display: none;
+      }
+
+      #logo-alt {
+        display: block;
+      }
+
+      .logo-col {
+        width: 25%;
+        margin-left: 0;
+      }
+
+      .nav-col {
+        position: fixed;
+        top: 0.8em;
+        right: _size(element-margin);
+        width: 80%;
+        margin-left: 0;
+      }
+
+      .menu-col,
+      .social-col {
+        float: right;
+        width: auto;
+      }
+
+      .menu{
+        float: none;
+      }
+    }
+  }
+
+  #hamburger {
+    text-transform: uppercase;
+    color: _palette(accent1, fg-bold);
+    border-bottom: none;
+    font-size: 1.9em;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  a.logo {
+    display: block;
+    border-bottom: none;
+    margin-bottom: _size(element-margin);
+  }
+
+  #logo-alt {
+    display: none;
+  }
+
+  .menu {
+
+    margin: 0;
+    float: right;
+
+    ul {
+      list-style: none;
+      margin: 0 0 .5em 0;
+      padding-left: 0;
+      float: left;
+    }
+
+    li {
+      list-style: none;
+      /*display: inline;*/
+      float: left;
+      padding-left: 1.2em;
+      line-height: 1em;
+    }
+
+    li:first-child {
+      padding-left: 0;
+    }
+
+    a, a:link {
+      color: #ffffff;
+      /*border-bottom: none;*/
+      text-decoration: none;
+      font-weight: _font(weight-bold);
+    }
+
+    .links a {
+      font-family: _font(family-heading);
+      /*letter-spacing: _font(kerning);*/
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+
+    .actions {
+      margin-left: 1em;
+      /*margin-bottom: 6px;*/
+      /*border-bottom: 1px dotted #ffffff;*/
+
+      li {
+        padding-left: .5em;
+        padding-bottom: 8px;
+      }
+    }
+
+    .actions a {
+      font-size: 1.2em;
+    }
+
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @include breakpoint(large) {
+    .menu {
+
+      .links a {
+        font-size: .9em;
+      }
+
+      .actions {
+
+        a {
+          font-size: 1em;
+        }
+
+        li {
+          padding-left: 0.1em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+
+    .logo {
+      margin-bottom: (_size(element-margin) * 0.5);
+    }
+
+    .menu {
+
+      float: none;
+
+      .links {
+        float: right;
+      }
+
+      .actions {
+        margin-left: 0;
+
+        li {
+          padding-right: 0.5em;
+        }
+      }
+    }
+
+    &.locked {
+
+      #header-lock {
+
+        .container {
+          margin-left: (_size(element-margin) * 0.5 );
+          margin-right: (_size(element-margin) * 0.5 );
+        }
+
+        a.logo {
+          margin-bottom: 0.1em;
+        }
+
+        .social-col {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Special case for  header */
+  @media screen and (max-width: 580px) {
+
+    &.locked {
+
+      #header-lock {
+
+        .logo-col {
+          display: none;
+        }
+
+        .nav-col {
+          position: static;
+          width: 100%;
+        }
+
+        .menu-col {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    &.locked {
+
+      #header-lock {
+
+        .logo-col {
+          display: block;
+          position: absolute;
+          width: 60%;
+        }
+
+        .container {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}

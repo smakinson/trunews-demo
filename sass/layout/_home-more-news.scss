@@ -1,0 +1,15 @@
+#home-more-news {
+
+  padding-bottom: (_size(element-margin) * 2);
+
+  .date {
+    font-size: 1.1em;
+  }
+
+  @include breakpoint(medium) {
+
+    .content {
+      bottom: (_size(element-margin) * 0.2 );
+    }
+  }
+}

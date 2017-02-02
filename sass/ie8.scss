@@ -1,0 +1,48 @@
+
+#header {
+
+  /*
+  Deal with ie and no media queries as needed.
+  Since is unlikely people will use ie8 and have the small viewport, just hide the hamburger menu.
+  */
+  .only-xsmall {
+    display: none;
+  }
+
+  nav.menu {
+    .not-small, .not-medium, .not-large {
+      display: none;
+    }
+  }
+
+  &.locked {
+
+    #header-lock {
+      background-color: #000000;
+    }
+  }
+}
+
+#home-banner {
+  #banner-content {
+    .hover-list {
+
+      li {
+        display: block;
+        margin-left: 0;
+
+        a {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+#home-streamcasts {
+
+  background: #a0b7f8;
+
+
+}
+

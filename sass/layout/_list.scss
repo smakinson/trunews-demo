@@ -1,0 +1,91 @@
+.hover-list {
+
+  padding-top: 0;
+  background-color: _palette(bg);
+
+  color: _palette(fg);
+
+  .header {
+    padding-top: 0.5em;
+    margin-left: 1.1em;
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-top: 0.7em;
+    }
+  }
+
+  ul {
+
+    /* Add the class .hovers to get some animation on the colors. */
+    &.hovers {
+
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+
+      li {
+        @include vendor("background-image", ("linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2))"));
+        list-style: none;
+        border-bottom: 1px solid _palette(border-bg);
+        padding: 0;
+      }
+
+      li:first-child {
+        border-top: 1px solid _palette(border-bg);
+      }
+
+      a {
+        cursor: pointer;
+        color: _palette(fg);
+        display: block;
+        box-sizing: border-box;
+        font-family: _font(family-heading);
+        font-weight: _font(weight-heading);
+        text-transform: none;
+        padding: 11px 1.6em 11px 1.6em;
+        line-height: 16px;
+        border-bottom: none;
+        height: 100%;
+      }
+
+      a:hover {
+        @include vendor('transition', (
+                'color #{_duration(transition) * 2} ease-in-out',
+                'background-color #{_duration(transition)} ease-in-out',
+        ));
+      }
+
+      a:hover,
+      .active{
+        background-color: _palette(accent3, bg);
+        color: _palette(accent3, fg-bold) !important;
+      }
+
+      .meta {
+        font-family: _font(family);
+        font-weight: _font(weight);
+        text-transform: uppercase;
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    ul {
+      li {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

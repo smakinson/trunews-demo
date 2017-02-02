@@ -1,0 +1,10 @@
+.hashtag {
+  text-transform: uppercase;
+
+  letter-spacing: _font(kerning);
+
+  em {
+    font-weight: _font(weight-bold);
+    font-family: _font(family-heading);
+  }
+}

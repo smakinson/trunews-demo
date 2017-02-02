@@ -1,0 +1,163 @@
+/*
+heros are the photo with the text on link on top of them
+The element using the hero class must have a height set. Do it outside this file.
+*/
+.hero {
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: _size(element-margin);
+
+  /*@include vendor('display', 'flex');
+  align-items: stretch;*/
+
+  color: _palette(accent1, fg-bold);
+
+  a {
+    color: _palette(accent1, fg-bold);
+  }
+
+  a.target {
+    border-bottom: none;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    @include img-dimmer;
+  }
+
+  .content,
+  .links,
+  .icons {
+    padding: (_size(element-margin) * 0.1) (_size(element-margin));
+  }
+
+  icons,
+  .content,
+  .meta {
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute;
+    z-index: (_misc(z-index-base) + 1);
+    left: 0;
+    bottom: (_size(element-margin) * 0.6);
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: .2em;
+    }
+
+    h1,
+    h2 {
+      text-shadow:
+              1px 0px 1px #ccc, 0px 1px 1px #000,
+              2px 1px 1px #333, 1px 2px 1px #000;
+    }
+
+    h1 {
+      font-size: 1.7em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .links {
+    position: absolute;
+    bottom: 0;
+    z-index: (_misc(z-index-base) + 2);
+  }
+
+  .meta {
+    text-transform: uppercase;
+    color: _palette(accent1, fg-light);
+    font-size: .9em;
+
+    .people {
+      color: _palette(bg);
+      font-size: 1.2em;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .icons {
+    position: absolute;
+    top: (_size(element-margin) * 0.7);
+    z-index: (_misc(z-index-base) + 3);
+    font-size: 1.7em;
+  }
+
+  @include breakpoint(xsmall) {
+
+    .content,
+    .links,
+    .icons {
+      padding: (_size(element-margin) * 0.1) (_size(element-margin) * 0.5);
+    }
+
+    .content {
+      bottom: (_size(element-margin) * 0.2);
+      line-height: 0.9em;
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+
+      .meta {
+        font-size: 0.7em;
+      }
+    }
+
+    .icons {
+      top: (_size(element-margin) * 0.1);
+      padding-left: (_size(element-margin) * 0.6);
+    }
+  }
+}
+
+.hero-panel {
+
+  margin-bottom: _size(element-margin);
+
+  .hero {
+    margin-bottom: 0;
+  }
+
+  .panel {
+    background-color: _palette(bg);
+    padding: _size(element-margin);
+
+    p {
+      margin-bottom: (_size(element-margin) * 0.5);
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .panel {
+      padding: (_size(element-margin) * 0.5);
+      line-height: 1.3em;
+    }
+  }
+}

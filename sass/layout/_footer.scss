@@ -1,0 +1,98 @@
+#footer {
+
+  color: _palette(accent1, fg-bold);
+  background-color: _palette(accent1, bg);
+  border-top: 10px solid _palette(invert, bg);
+  padding-top: _size(element-margin);
+  padding-bottom: _size(element-margin);
+
+  h6 {
+    font-family: _font(family-heading);
+    font-weight: _font(weight-heading);
+    font-size: 1.2em;
+  }
+
+  p,
+  .actions li a {
+    font-size: .8em;
+  }
+
+  a.logo {
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  .info,
+  .copy {
+    text-transform: uppercase;
+
+    a {
+      border-bottom-color: inherit;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  .copy{
+    text-align: right;
+  }
+
+  #footer-to-top {
+    text-transform: uppercase;
+    float: right;
+    font-family: _font(family-heading);
+    font-weight: _font(weight-heading);
+  }
+
+  .actions li {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  a {
+    border-bottom-color: transparent;
+    color: _palette(accent1, fg-bold);
+
+    &:hover {
+      border-bottom-color: _palette(accent1, fg-bold);
+    }
+  }
+
+  section.social a{
+    word-break: break-all;
+  }
+
+  nav {
+    margin-top: _size(element-margin);
+    margin-bottom: (_size(element-margin) * 0.5);
+    padding-bottom: (_size(element-margin) * 4);
+    border-top: 1px solid _palette(accent1, fg-light);
+    border-bottom: 1px solid _palette(accent1, fg-light);
+  }
+
+  @include breakpoint(small) {
+    h6 {
+      font-size: 1em;
+    }
+
+    ul.actions li {
+      text-align: left;
+    }
+
+    .copy {
+      text-align: left;
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    #footer-to-top {
+      float: none;
+    }
+  }
+
+}

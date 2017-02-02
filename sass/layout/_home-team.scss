@@ -1,0 +1,68 @@
+#home-team {
+  background-color: _palette(bg);
+  box-sizing: border-box;
+  margin-top: -140px;
+
+  -webkit-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.75);
+
+  .person {
+
+    display: table;
+    padding: _size(element-margin);
+
+    .va {
+      display: table-cell;
+      height: 108px;
+      vertical-align: middle;
+      padding-left: 1em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      /*margin-top: _size(element-margin);*/
+    }
+
+    h3 {
+      line-height: 1.4em;
+      margin-bottom: 0;
+    }
+  }
+
+  .one {
+    color: _palette(bg);
+    background-color: _palette(accent4, bg);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  }
+
+  .two {
+    background-color: _palette(bg);
+  }
+
+  .three {
+    color: _palette(bg);
+    background-color: _palette(accent3, bg);
+    clip-path: polygon(5% 0%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(5% 0%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @include breakpoint (small) {
+    .one,
+    .three {
+      clip-path: none;
+      -webkit-clip-path: none;
+    }
+  }
+}
+
+#home-team-banner {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  border-top: 1px solid _palette(bg);
+  border-bottom: 0;
+  margin-bottom: _size(element-margin);
+}
+

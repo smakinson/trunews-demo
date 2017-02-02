@@ -1,0 +1,28 @@
+// Skelton setup.
+@mixin skel-setup() {
+
+  // Skelton setup.
+
+  @include skel-breakpoints((
+          xlarge: "(max-width: 1680px)",
+          large: "(max-width: 1280px)",
+          medium: "(max-width: 980px)",
+          small: "(max-width: 736px)",
+          xsmall: "(max-width: 480px)"
+  ));
+
+  /* Manually adding normalize and not using the skel version */
+  @include skel-layout((
+          grid: true,
+          containers: 1150px,
+          breakpoints: (
+                  large: (
+                          containers: 90%
+                  ),
+                  medium: (
+                          containers: 95%
+                  )
+          )
+  ));
+
+}

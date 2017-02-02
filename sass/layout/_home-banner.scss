@@ -1,0 +1,238 @@
+$bannerHeightLarge: 530px;
+$clipOffset: -70px;
+$streamcastHeroHeight: ($bannerHeightLarge - 196);
+
+#home-banner {
+
+  max-width: 1400px;
+  margin: 0 auto;
+
+  #banner-content {
+    border-top: 5px solid _palette(accent1, fg-bold);
+    border-bottom: 1px solid _palette(border);
+    background-color: _palette(bg);
+    background-repeat: no-repeat;
+    background-position: right 100%;
+    margin-bottom: _size(element-margin);
+    overflow: hidden;
+
+    .hashtag {
+      font-size: 1.5em;
+    }
+
+    .streamcast {
+
+      > header {
+        position: relative;
+        box-sizing: border-box;
+        font-size: 0.8em;
+        padding: 10px 0 12px 1.2em;
+        margin: 0;
+        color: _palette(accent1, fg-bold);
+        background-color: _palette(accent4, bg);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+        * {
+          padding: 0;
+          margin: 0;
+        }
+
+        a {
+          position: absolute;
+          top: 9px;
+          right: 10px;
+          font-size: 1.1em;
+          color: _palette(bg);
+          margin-right: .7em;
+
+        }
+      }
+
+      a.spreaker-player {
+        box-sizing: border-box;
+        padding: 2em;
+        color: _palette(fg);
+        font-size: 1.2em;
+        display: block;
+        text-align: center;
+        text-decoration: underline;
+
+        &:before {
+          content: 'Your browser may not support the stream player. ';
+          font-weight: _font(weight-bold);
+        }
+      }
+    }
+  }
+
+  #banner-focus {
+    overflow: hidden;
+    height: $bannerHeightLarge;
+    clip-path: polygon(0 0, 100% 0, 93% 18.5%, 100% 37%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 93% 18.5%, 100% 37%, 100% 100%, 0 100%);
+
+    .hero {
+      height: $bannerHeightLarge;
+
+      .content {
+        bottom: 90px;
+        padding-right: 4em;
+      }
+
+      p {
+        margin-bottom: .4em;
+      }
+    }
+  }
+
+  .hover-list {
+
+    .header {
+      h2 {
+        margin-bottom: 0.4em;
+      }
+    }
+
+    li {
+      margin-left: $clipOffset;
+
+      a {
+        font-size: 0.9em;
+        padding-left: 90px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+      }
+    }
+
+    @include breakpoint(medium) {
+      li {
+        a {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+
+    #banner-content {
+
+      .streamcast {
+        .header {
+          h2 {
+            font-size: 1.2em;
+            padding-top: 3px;
+            padding-bottom: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+
+    #banner-content {
+      background-size: 100%;
+
+      .streamcast {
+        .header {
+          h2 {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+
+    #banner-focus {
+      height: ($bannerHeightLarge * .6);
+      clip-path: none;
+      -webkit-clip-path: none;
+
+      .hero {
+        height: ($bannerHeightLarge * .6);
+      }
+    }
+
+    .hover-list {
+
+      padding-top: 0;
+
+      .header {
+        display: none;
+      }
+
+      ul {
+        @include vendor('display', 'flex');
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        top: 0;
+      }
+
+      li {
+        margin-left: 0;
+        border: 1px solid _palette(border-bg);
+        border-right-color: _palette(border-bg);
+        display: inline-block;
+        background-color: _palette(bg);
+        border: none !important;
+        flex-basis: 50%;
+        max-width: 50%;
+
+        /* ie */
+        float: left;
+        width: 50%;
+        /* end ie */
+
+        a {
+          padding: 1em;
+          /*white-space: normal;
+          overflow: auto;*/
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    #banner-content {
+      h1 {
+        font-size: 1.1em;
+      }
+
+      p, .icon {
+        font-size: .8em;
+      }
+
+      .hover-list {
+
+        li {
+          flex-basis: 100%;
+
+          /* ie */
+          float: none;
+          width: 100%;
+          max-width: 100%;
+          /* end ie */
+        }
+
+      }
+
+      .hashtag {
+        font-size: 1em;
+      }
+
+      .hero {
+        .content {
+          bottom: 60px;
+          padding-right: 1em;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+section {
+  header {
+    h2.main {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.home {
+
+  section {
+    padding-top: 1.7em;
+
+    header {
+      h2.main {
+        color: _palette(bg);
+
+        text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #000,
+        2px 1px 1px #333, 1px 2px 1px #000;
+      }
+    }
+
+    &#home-more-news {
+      header {
+        h2.main {
+          color: _palette(fg);
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(small) {
+
+  section {
+    header {
+      h2.main {
+        font-size: 1.5em;
+        text-align: center;
+      }
+    }
+  }
+}

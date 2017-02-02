@@ -1,0 +1,9 @@
+.home {
+  /*
+    Support for full multi-stop gradients with IE9 (using SVG).
+    http://www.colorzilla.com/gradient-editor/
+  */ }
+  .home .gradient {
+    filter: none; }
+
+/*# sourceMappingURL=ie9.css.map */
