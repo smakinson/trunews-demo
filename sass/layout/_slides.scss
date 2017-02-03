@@ -1,23 +1,17 @@
 .slides {
   position: relative;
-  z-index: (_misc(z-index-base) + 20);
   width: 100%;
   height: 100%;
 
   .slide {
     position: absolute;
-    z-index: (_misc(z-index-base) + 21);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
 
-    a.target {
-      img {
-        max-width: none;
-      }
-    }
-
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
