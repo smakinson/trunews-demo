@@ -93,7 +93,7 @@
 
     function setupSlides(id, listId) {
         var paused = false;
-        var speed = 1, delay = 1, fullDelay = speed + delay;
+        var speed = 1, delay = 4, fullDelay = speed + delay;
         var slides = $(id + ' > .slide');
         var slidesListItems = $(listId + ' > li');
         var slidesListLinks = slidesListItems.find('a');
